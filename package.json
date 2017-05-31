@@ -4,6 +4,7 @@
   "dependencies": {
     "cheerio": "latest",
     "request": "latest",
+     "express": "^4.13.3",
     "sqlite3": "latest"
   },
   "keywords": [
