@@ -9,6 +9,6 @@ db.serialize(function() {
 
   // Insert a new record
   var statement = db.prepare("INSERT INTO data(title) VALUES (?)");
-  statement.run('A new title to add');
+  statement.run( Math.round(Math.random()*100));
   statement.finalize();
 });
