@@ -11,7 +11,9 @@ db.serialize(function() {
   
   // Insert a new record
   var statement = db.prepare("INSERT INTO data VALUES (?,?)");
-  statement.run("груша яблоко",Math.round(Math.random()*100));
+  var res = Math.round(Math.random()*100);
+  if(res>80){statement.run("груша яблоко",res);}
+  else none;
   
   statement.finalize();
 });
