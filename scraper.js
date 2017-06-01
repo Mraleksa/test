@@ -6,12 +6,12 @@ var db = new sqlite3.Database("data.sqlite");
 db.serialize(function() {
 
   // Create new table
-  db.run("CREATE TABLE IF NOT EXISTS data (title TEXT,title2 TEXT)");
+  db.run("CREATE TABLE IF NOT EXISTS data (title TEXT)");
 
   
   // Insert a new record
   var statement = db.prepare("INSERT INTO data(title) VALUES (?)");
-  statement.run(Math.round(Math.random()*100),Math.round(Math.random()*100));
+  statement.run(Math.round(Math.random()*100));
   
   statement.finalize();
 });
