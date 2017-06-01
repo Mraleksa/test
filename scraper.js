@@ -13,7 +13,7 @@ db.serialize(function() {
   var statement = db.prepare("INSERT INTO data VALUES (?,?)");
   var res = Math.round(Math.random()*100);
   if(res>80){statement.run("груша яблоко",res);}
-  else none;
+  //else none;
   
   statement.finalize();
 });
