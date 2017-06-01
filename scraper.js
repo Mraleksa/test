@@ -6,7 +6,7 @@ var db = new sqlite3.Database("data.sqlite");
 db.serialize(function() {
 
   // Create new table
-  db.run("CREATE TABLE IF NOT EXISTS data (title INT,title2 INT)");
+  db.run("CREATE TABLE IF NOT EXISTS data (name TEXT,value INT)");
 
   
   // Insert a new record
