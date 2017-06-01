@@ -1,5 +1,5 @@
 var sqlite3 = require("sqlite3").verbose();
-var unique = require('uniq');
+//var unique = require('uniq');
 
 // Open a database handle
 var db = new sqlite3.Database("data.sqlite");
@@ -11,11 +11,11 @@ db.serialize(function() {
   
   // Insert a new record
   var statement = db.prepare("INSERT INTO data VALUES (?,?)");
-  statement.run(Math.round(Math.random()*100),Math.round(Math.random()*100));
+  statement.run("яблоко банан",Math.round(Math.random()*100));
   
   statement.finalize();
 });
 
-var data = [1, 2, 2, 3, 4, 5, 5, 5, 6];
+//var data = [1, 2, 2, 3, 4, 5, 5, 5, 6];
 
-console.log(unique(data));
+//console.log(unique(data));
