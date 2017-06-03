@@ -18,6 +18,6 @@ db.serialize(function() {
   statement.finalize();
 });
 
-//var data = [1, 2, 2, 3, 4, 5, 5, 5, 6];
+var data = [1, 2, 2, 3, 4, 5, 5, 5, 6];
 
-//console.log(unique(data));
+console.log(unique(data));
