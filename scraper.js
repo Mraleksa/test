@@ -1,5 +1,5 @@
 var sqlite3 = require("sqlite3").verbose();
-//var unique = require('uniq');
+var unique = require('uniq');
 
 // Open a database handle
 var db = new sqlite3.Database("data.sqlite");
